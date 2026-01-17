@@ -23,7 +23,14 @@
 
 #### 1. Introducción a DevOps
 
-DevOps es una metodología que combina desarrollo (Dev) y operaciones (Ops) para mejorar la colaboración y automatización en el ciclo de vida del software.
+DevOps es una filosofía cultural que elimina las barreras entre los equipos de desarrollo y operaciones, permitiendo que colaboren estrechamente para optimizar la productividad y confiabilidad. Los equipos trabajan de forma integrada, asumiendo responsabilidad compartida sobre todo el ciclo de vida del software y la infraestructura, pensando siempre en las necesidades del cliente.
+
+**Cambio Cultural DevOps:**
+- Eliminación las breachas entre desarrollo y operaciones
+- Comunicación frecuente y colaboración constante
+- Responsabilidad compartida del servicio completo
+- Integración de equipos de QA y seguridad
+- Visión holística del ciclo de vida del desarrollo
 
 **Ciclo de Vida DevOps:**
 
@@ -35,16 +42,16 @@ DevOps es una metodología que combina desarrollo (Dev) y operaciones (Ops) para
 └─────────────────────────────────────────────────────────┘
 ```
 
-**Pilares Fundamentales:**
-- Automatización de procesos
-- Integración continua
-- Despliegue continuo
-- Monitorización y feedback
-- Colaboración entre equipos
+**Beneficios Clave:**
+- Innovación más rápida para los clientes
+- Entregas frecuentes pero pequeñas
+- Reducción de riesgos en cada implementación
+- Identificación y resolución rápida de errores
+- Mayor confiabilidad y velocidad en las actualizaciones
 
 #### 2. Configuración de Pipelines Básicos
 
-Un pipeline de CI/CD automatiza las fases de integración, testing y despliegue del código.
+Un pipeline de CI/CD automatiza las fases de integración, testing y despliegue del código, permitiendo entregas frecuentes, seguras y confiables. La combinación de microservicios y mayor frecuencia de publicación requiere automatización robusta para gestionar múltiples implementaciones.
 
 **Arquitectura de un Pipeline:**
 
@@ -54,6 +61,20 @@ Código → Compilación → Testing → Staging → Producción
  Git    Build Logs   Test Reports Deploy Logs Monitoring
 ```
 
+**Prácticas Fundamentales:**
+
+**Integración Continua (CI)**
+- Automatización de pruebas en cada cambio
+- Validación de código inmediata
+- Generación de artefactos
+- Detección temprana de errores
+
+**Entrega Continua (CD)**
+- Despliegues frecuentes pero pequeños
+- Reducción de riesgo por implementación
+- Identificación rápida de problemas
+- Entregas confiables y predecibles
+
 **Herramientas Comunes:**
 - GitHub Actions
 - GitLab CI/CD
@@ -61,6 +82,7 @@ Código → Compilación → Testing → Staging → Producción
 - CircleCI
 
 **Documentación Oficial:**
+- [AWS](https://aws.amazon.com/es/devops/what-is-devops/)
 - [GitHub Actions](https://docs.github.com/en/actions)
 - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/)
 - [Jenkins](https://www.jenkins.io/doc/)
@@ -68,29 +90,30 @@ Código → Compilación → Testing → Staging → Producción
 
 #### 3. Conceptos Clave
 
-**Integración Continua (CI)**
-```yaml
-Trigger: Push a repositorio
-├── Ejecutar tests automáticos
-├── Validar código
-├── Generar artefactos
-└── Notificar resultados
-```
-
-**Despliegue Continuo (CD)**
-```yaml
-Trigger: Build exitoso
-├── Desplegar a staging
-├── Ejecutar tests de integración
-├── Desplegar a producción
-└── Monitorizar aplicación
-```
+**Arquitectura de Microservicios**
+- Desacoplamiento de sistemas complejos en servicios independientes
+- Cada servicio con propósito único y operación independiente
+- Reducción de coordinación necesaria para actualizaciones
+- Equipos pequeños responsables de servicios específicos
+- Mayor flexibilidad e innovación rápida
 
 **Infrastructure as Code (IaC)**
-- Gestionar infraestructura mediante código
-- Versionado y control de cambios
-- Reproducibilidad y consistencia
-- Automatización de provisioning
+- Gestión de infraestructura mediante código versionado
+- Automatización de provisioning y configuración
+- Reproducibilidad y consistencia en todos los ambientes
+- Control de cambios y auditoría completa
+
+**Monitoreo y Logging**
+- Supervisión del desempeño de aplicaciones e infraestructura
+- Reacción rápida ante problemas
+- Visibilidad completa del sistema
+- Feedback continuo para mejora
+
+**Automatización de Procesos**
+- Eliminación de tareas manuales repetitivas
+- Consistencia en implementaciones
+- Reducción de errores humanos
+- Aceleración del ciclo de entrega
 
 ---
 
