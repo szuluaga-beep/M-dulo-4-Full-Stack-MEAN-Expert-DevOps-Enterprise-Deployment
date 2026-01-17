@@ -51,6 +51,19 @@ DevOps es una filosofía cultural que elimina las barreras entre los equipos de 
 
 #### 2. Configuración de Pipelines Básicos
 
+**¿Qué es un Pipeline?**
+
+Un pipeline es una secuencia automatizada de pasos (tareas) que se ejecutan de manera consecutiva para transformar el código fuente en una aplicación lista para producción. Es como una línea de montaje en la manufactura, donde cada etapa realiza una función específica y el resultado se pasa a la siguiente etapa.
+
+En el contexto de DevOps y CI/CD, un pipeline automatiza todo el ciclo de vida del software: desde que el código es enviado (commit) hasta que se despliega en los servidores de producción. Cada paso del pipeline ejecuta validaciones, pruebas y transformaciones automáticas, garantizando que el código cumpla con los estándares de calidad antes de llegar a producción.
+
+**Características principales de un pipeline:**
+- **Automatización**: Las tareas se ejecutan sin intervención manual
+- **Secuencial**: Cada etapa se ejecuta en orden y solo continúa si la anterior fue exitosa
+- **Feedback Rápido**: Detección inmediata de errores en cualquier etapa
+- **Confiabilidad**: Asegura consistencia en cada despliegue
+- **Velocidad**: Reduce significativamente el tiempo de entrega
+
 Un pipeline de CI/CD automatiza las fases de integración, testing y despliegue del código, permitiendo entregas frecuentes, seguras y confiables. La combinación de microservicios y mayor frecuencia de publicación requiere automatización robusta para gestionar múltiples implementaciones.
 
 **Arquitectura de un Pipeline:**
