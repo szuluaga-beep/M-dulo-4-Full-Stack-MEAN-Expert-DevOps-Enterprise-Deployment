@@ -2,6 +2,8 @@
 
 Este directorio contiene ejemplos prácticos de la Clase 2 sobre creación de imágenes Docker para aplicaciones MEAN.
 
+⚠️ **Aviso de Seguridad**: Estos ejemplos usan versiones con parches de seguridad aplicados. Las dependencias se actualizan regularmente. Siempre ejecuta `npm audit` y actualiza a las últimas versiones estables antes de usar en producción.
+
 ## Estructura del Proyecto
 
 ```
@@ -188,6 +190,55 @@ Edita `docker-compose.yml` para ajustar:
 6. **Volúmenes**: Persistencia de datos de MongoDB
 7. **Redes**: Aislamiento de servicios
 8. **Nginx optimizado**: Compresión, caché y seguridad
+
+## Auditoría de Seguridad
+
+### Verificar Vulnerabilidades
+
+```bash
+# Auditar dependencias del backend
+cd backend
+npm audit
+
+# Auditar dependencias del frontend
+cd frontend
+npm audit
+
+# Ver detalles completos
+npm audit --json
+
+# Aplicar fixes automáticos (cuando sea posible)
+npm audit fix
+```
+
+### Escanear Imágenes Docker
+
+```bash
+# Usando Docker Scout (incluido en Docker Desktop)
+docker scout cves mean-backend:latest
+
+# Usando Trivy
+trivy image mean-backend:latest
+trivy image mean-frontend:latest
+trivy image mongo:7.0
+
+# Escanear todas las imágenes
+docker images --format "{{.Repository}}:{{.Tag}}" | xargs -I {} trivy image {}
+```
+
+### Mantener Dependencias Actualizadas
+
+```bash
+# Ver versiones disponibles
+npm outdated
+
+# Actualizar a versiones menores/patch
+npm update
+
+# Actualizar a versiones mayores (con precaución)
+npx npm-check-updates -u
+npm install
+```
 
 ## Problemas Comunes
 

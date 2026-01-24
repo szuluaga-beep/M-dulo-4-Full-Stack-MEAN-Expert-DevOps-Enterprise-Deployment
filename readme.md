@@ -534,7 +534,27 @@ CMD ["node", "server.js"]
 5. **Secrets Management**: Usar servicios como AWS Secrets Manager
 6. **Logging y Monitoreo**: Detectar actividad sospechosa
 7. **Actualización Regular**: Mantener dependencias actualizadas
+   ```bash
+   # Verificar vulnerabilidades conocidas
+   npm audit
+   
+   # Actualizar dependencias de seguridad
+   npm audit fix
+   
+   # Verificar versiones disponibles
+   npm outdated
+   ```
+
 8. **Escaneo de Vulnerabilidades**: Usar herramientas como Snyk o Trivy
+   ```bash
+   # Escanear imagen Docker
+   docker scan mean-backend:latest
+   
+   # O usar Trivy
+   trivy image mean-backend:latest
+   ```
+
+⚠️ **Importante**: Los ejemplos de este curso usan versiones específicas con parches de seguridad aplicados. Siempre verifica y actualiza a las últimas versiones estables en tus proyectos reales.
 
 
 #### 7. Comandos Docker Esenciales
