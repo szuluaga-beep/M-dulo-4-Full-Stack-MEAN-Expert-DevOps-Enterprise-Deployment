@@ -18,6 +18,19 @@ Es el cerebro del cluster que toma decisiones globales sobre el cluster y detect
 ### **Worker Nodes (Nodos de Trabajo)**
 Son las máquinas que ejecutan las aplicaciones en contenedores organizadas en Pods.
 
+## Flujo de Despliegue en Kubernetes
+
+El siguiente diagrama muestra el flujo completo desde que un desarrollador ejecuta un comando hasta que los Pods están corriendo en los Worker Nodes:
+
+![Flujo de Despliegue en Kubernetes](./kubernetes-complete-flow.png)
+
+### Pasos del Flujo:
+
+1. **Desarrollador ejecuta kubectl**: El desarrollador escribe y ejecuta `kubectl apply -f deployment.yaml`
+2. **API Server valida**: El API Server recibe la solicitud, la valida y la autentica
+3. **Scheduler asigna**: El Scheduler decide en qué Worker Nodes se ejecutarán los Pods según recursos disponibles
+4. **Pods en ejecución**: Los Pods se despliegan en los Worker Nodes y comienzan a ejecutar los contenedores
+
 ## Conceptos Clave
 
 ### 1. Pod
